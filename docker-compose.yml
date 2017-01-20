@@ -7,6 +7,9 @@ services:
     volumes:
       - ".:/calcapi"
     command: "nodemon server.js"
+    build:
+      context: .
+      dockerfile: Dockerfile
   test:
     image: "calcapi"
     volumes:
