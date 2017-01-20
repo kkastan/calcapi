@@ -25,7 +25,7 @@ $ docker-compose run test
 ### Error Handling
 This is an area which deserves further discussion. Note that the CalcApi server registers an `uncaughtException` event handler. This is to allow for uncaught exceptions being written as errors to the application log, as opposed to being swallowed and simply written to the http response JSON as a short description of the error without much context.
 
-Restify's error handling documenation is promising. A more robust error handling configuration is left as an excersize for the reader at this time.
+Restify's error handling documentation is promising. A more robust error handling configuration is left as an exercise for the reader at this time.
 
 ## Jasmine
 The Jasmine tests are located in the `spec/` directory. Jasmine supports fine grained unit tests as well as coarser tests on server endpoints. It employes an elegant BDD syntax where test cases can be expressed in an easy and human readable format:
@@ -54,6 +54,6 @@ Jasmine is configured in `package.json` as follows:
   "start": "node server.js"
 }
 ```
-Note the `--forceexit` and `--captureExceptions` flags. They are required for teh following reasons:
+Note the `--forceexit` and `--captureExceptions` flags. They are required for the following reasons:
 * `--forceexit` To stop the jasmine process after test completion. Without this flag the server that jasmine starts to run the tests in will run indefinitely.
 * `--captureExceptions` To prevent losing errors which occur outside of the jasmine stack. For example without this option errors such as javascript syntax errors will not get logged to stdout or stderr and will **not** result in a non-zero exit code.
