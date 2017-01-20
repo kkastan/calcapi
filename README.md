@@ -1,6 +1,6 @@
 # CalcApi
 
-CalcApi is a rudimentary api service written in node\.js. It serves as an example of how to implement a RESTful service using the [restify](http://restify.com/) framework and [jasmine](https://jasmine.github.io/2.0/node.html) testing package.
+CalcApi is a rudimentary api service written in node\.js. It serves as a starting point for implementing a RESTful service using the [restify](http://restify.com/) framework and [jasmine](https://jasmine.github.io/2.0/node.html) testing package.
 
 
 To build the `calcapi` docker image:
