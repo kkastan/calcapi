@@ -1,0 +1,14 @@
+version: "2"
+services:
+  calcapi:
+    image: calcapi
+    ports:
+      - "8080:8080"
+    volumes:
+      - ".:/calcapi"
+    command: "nodemon server.js"
+  test:
+    image: "calcapi"
+    volumes:
+      - ".:/calcapi"
+    command: "npm test"
